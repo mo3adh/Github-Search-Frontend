@@ -4,19 +4,20 @@ function UserCard(props: any) {
     const user: UserData = {
         id : props.userData.id,
         imgUrl: props.userData.avatar_url,
-        url: props.userData.url,
+        url: props.userData.html_url,
         userName: props.userData.login,
     };
 
-    console.log(user);
-
     return ( 
         <div className="UserCard">
-            <ul>
-                <li>{user.imgUrl }</li>
-                <li>{user.url }</li>
-                <li>{user.userName }</li>
-            </ul>
+            <div className="imgDiv">
+                <img src={user.imgUrl} alt="Image not found"/>
+            </div>
+            <div className="secondDiv"> 
+                <h2>{user.userName}</h2>
+                <a href={user.url} target="_blank">{user.url}</a>
+            </div>
+            <div className="clearFix"></div>
         </div>
      );
 }

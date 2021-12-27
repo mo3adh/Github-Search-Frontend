@@ -4,6 +4,7 @@ import UserCard from "./UserCard";
 
 function Cards(props: any) {
     const data = props.data;
+    console.log(data);
 
     return (
         <div className="Cards">
@@ -14,7 +15,7 @@ function Cards(props: any) {
                 <RepoCard key={repo.id} repoData = {repo}/>
             ))}
             {data && data.type == 'issues' && data.data.items.map((issue: any) => (
-                <IssueCard key={issue.id} userData = {issue}/>
+                <IssueCard key={issue.id} issueData = {issue}/>
             ))}
         </div>
     );

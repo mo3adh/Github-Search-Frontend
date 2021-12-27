@@ -41,6 +41,8 @@ img{
     color: grey;
 }
 
+.secondDiv a{float: left;}
+
 .searchForm {
     text-align: left;
 }
@@ -88,3 +90,12 @@ img{
 .Cards {
     margin-top: 100px;
 }
+
+.UserCard, .RepoCard, .IssueCard {
+    margin-bottom: 20px;
+}
+
+.RepoCard, .IssueCard {
+    text-align: left;
+}
+

@@ -13,7 +13,14 @@ function RepoCard(props: any) {
     
     return ( 
         <div className="RepoCard">
-            Repo Card
+            <div className="container">
+                <div className="secondDiv"> 
+                    <h2>Name: {repo.name}</h2>
+                    <h3>Owner: {repo.owner}</h3>
+                    <a href={repo.url} target="_blank">{repo.url}</a>
+                </div>
+            </div>
+            <div className="clearFix"></div>
         </div>
      );
 }
