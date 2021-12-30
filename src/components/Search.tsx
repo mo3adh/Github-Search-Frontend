@@ -3,16 +3,19 @@ import sreverUrl from "../enviornment";
 import PostData from "../services/postData";
 import "../assets/main.css";
 import Cards from "./Cards";
+import { useSelector, useDispatch } from "react-redux";
+import { setData } from "../redux/dataSlice";
 
 function Search() {
     const [searchType, setSearchType] = useState("users");
     const [searchBody, setSerachBody] = useState("");
-    const [data, setData] = useState(null);
+    const data = useSelector((state: any) => state.data.value);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         async function makeAPIRequest() {
             const data = await PostData(sreverUrl + '/search', {searchType, searchBody});
-            setData(data);
+            dispatch(setData(data));
         }
         if(searchBody.length >= 3)
             makeAPIRequest();

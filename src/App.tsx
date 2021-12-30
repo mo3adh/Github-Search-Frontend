@@ -4,11 +4,12 @@ import Search from "./components/Search";
 
 function App() {
 
-  return (
+    return (
     <div className="App">
-      <Search />
+        <Search />
+        <Cards />
     </div>
-  );
+    );
 }
 
 export default App;

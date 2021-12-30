@@ -13,8 +13,8 @@ function IssueCard(props: any) {
 
     return ( 
         <div className="IssueCard">
-            <div className="container">
-                <div className="secondDiv"> 
+            <div className="card">
+                <div className="cardDetails"> 
                     <h2>Title: {issue.title}</h2>
                     <h3>Owner: {issue.user}</h3>
                     <a href={issue.url} target="_blank">{issue.url}</a>

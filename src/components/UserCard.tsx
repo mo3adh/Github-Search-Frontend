@@ -10,14 +10,14 @@ function UserCard(props: any) {
 
     return ( 
         <div className="UserCard">
-            <div className="imgDiv">
-                <img src={user.imgUrl} alt="Image not found"/>
-            </div>
-            <div className="secondDiv"> 
-                <h2>{user.userName}</h2>
-                <a href={user.url} target="_blank">{user.url}</a>
-            </div>
-            <div className="clearFix"></div>
+                <div className="userImage">
+                    <img src={user.imgUrl} alt="Image not found"/>
+                </div>
+                <div className="cardDetails"> 
+                    <h3>{user.userName}</h3>
+                    <a href={user.url} target="_blank">{user.url}</a>
+                </div>
+                <div className="clearFix"></div>
         </div>
      );
 }
